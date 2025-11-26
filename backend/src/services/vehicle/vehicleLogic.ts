@@ -12,7 +12,7 @@ import { VehicleListParams, VehicleListResponse, Vehicle } from './vehicleTypes'
  * @remarks
  * In-memory vehicle storage (no database persistence)
  */
-let vehicles: Vehicle[] = [
+export let vehicles: Vehicle[] = [
   {
     id: '1',
     model: 'Civic',

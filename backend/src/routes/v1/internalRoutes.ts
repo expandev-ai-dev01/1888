@@ -7,13 +7,21 @@
  */
 
 import { Router } from 'express';
+import * as vehicleController from '@/api/v1/internal/vehicle/controller';
+import * as contactController from '@/api/v1/internal/contact/controller';
 
 const router = Router();
 
 /**
- * @remarks
- * Internal routes will be added here as features are implemented.
- * Examples: resource management, user operations, protected data access, etc.
+ * @rule {be-vehicle-routes}
+ * Vehicle listing routes
  */
+router.get('/vehicle', vehicleController.listHandler);
+
+/**
+ * @rule {be-contact-routes}
+ * Contact form submission routes
+ */
+router.post('/contact', contactController.postHandler);
 
 export default router;
